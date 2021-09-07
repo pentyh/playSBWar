@@ -1,4 +1,4 @@
-package com.rl.playsbwar.control;
+package com.rl.playsbwar.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
