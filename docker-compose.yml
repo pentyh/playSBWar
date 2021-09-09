@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+#    image: website:1.0.0
+    image: website
+    container_name: website
+    restart: always
+    networks:
+      - nets
+#    volumes:
+#      - /home/rl/logs/:/home/rl/logs/
+    ports:
+      - "8081:8081"
+    environment:
+      - JAVA_OPTS=-Xmx256M -Dspring.profiles.active=test -Duser.timezone=GMT+09
+
+networks:
+  nets:
+    external: false
